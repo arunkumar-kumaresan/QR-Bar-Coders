@@ -1,0 +1,25 @@
+{
+  "name": "qrbarcoders",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist/* && parcel build client/index.html --no-cache --no-source-maps --no-minify && node utils",
+    "push": "clasp push",
+    "deploy": "rm -rf dist/* && parcel build client/index.html --no-cache --no-source-maps --no-minify && node utils && clasp push"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.31",
+    "parcel-plugin-inliner": "^1.0.16",
+    "posthtml": "^0.15.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "cssnano": "^4.1.11",
+    "nodemon": "^2.0.7",
+    "sass": "^1.32.8"
+  }
+}

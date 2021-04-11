@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <base target="_top">
+    <link rel="stylesheet" href="scss/main.scss">
+</head>
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css"
+      integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
+
+<body>
+<div class="pure-g">
+    <div class="pure-u-1 l-box">
+        <h4 class="title">Create QR Code</h4>
+        <p class="help-link"><a href="https://www.timesofautomation.com/qr-bar-coders" target="_blank">Help</a></p>
+        <div id="error-div" class="error-div"></div><br/>
+        <h5 class="title">Preview</h5>
+        <div id="qrcode-preview" class="preview"></div>
+    </div>
+    <div class="pure-u-1 l-box">
+        <a class="pure-button pure-button-primary" id="generate-btn">Create Code</a>
+        <a class="pure-button pure-button-primary pure-button-disabled" id="copy-btn">Copy</a>
+        <form class="pure-form pure-form-stacked">
+            <fieldset>
+                <label id="qrcode-text-label">Enter the text: (Max length: 1660)</label>
+                <textarea id="qrcodetext" class="qrcode-text" required></textarea>
+                <label>Width: (in pixels)</label>
+                <input id="qrcode-width" type="number" value="150" min=50 max=500>
+                <label>Height: (in pixels)</label>
+                <input id="qrcode-height" type="number" value="150" min=50 max=500>
+                <label>Foreground Color: (Default: #000000)</label>
+                <input id="qrcode-fg-color" type="color" value="#000000">
+                <label>Background Color: (Default: #ffffff)</label>
+                <input id="qrcode-bg-color" type="color" value="#ffffff">
+                <label>Error Correction: (Default: Level Quartile)</label>
+                <select id="qrcode-error-level">
+                    <option value="1">Level Low (7%)</option>
+                    <option value="0">Level Medium (15%)</option>
+                    <option value="3" selected>Level Quartile (25%)</option>
+                    <option value="2">Level High (30%)</option>
+                </select>
+                <br/>
+            </fieldset>
+        </form>
+    </div>
+    <div class="pure-u-1 l-box">
+        <p class="footer-link"><a href="https://www.timesofautomation.com" target="_blank">Times of Automation</a></p>
+    </div>
+</div>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
